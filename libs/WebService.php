@@ -1,10 +1,9 @@
 <?php
 class WebService
 {
-    public function sendPost($url, $arryparam)
+
+    public function sendPost($url, $data)
     {
-        //datos a enviar
-        $data = $arryparam;
         //url contra la que atacamos
         $ch = curl_init($url);
         //a true, obtendremos una respuesta de la url, en otro caso,
@@ -16,19 +15,17 @@ class WebService
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         //obtenemos la respuesta
         $response = curl_exec($ch);
+
         // Se cierra el recurso CURL y se liberan los recursos del sistema
         curl_close($ch);
         if (!$response) {
             return false;
-        } else {
-            return $response;
         }
+        return $this->responseDecode($response);
     }
 
-    public function sendPut($url, $arryparam)
+    public function sendPut($url, $data)
     {
-        //datos a enviar
-        $data = $arryparam;
         //url contra la que atacamos
         $ch = curl_init($url);
         //a true, obtendremos una respuesta de la url, en otro caso,
@@ -44,15 +41,12 @@ class WebService
         curl_close($ch);
         if (!$response) {
             return false;
-        } else {
-            var_dump($response);
         }
+        return $this->responseDecode($response);
     }
 
-    public function sendGet($url, $arryparam)
+    public function sendGet($url, $data)
     {
-        //datos a enviar
-        $data = $arryparam;
         //url contra la que atacamos
         $ch = curl_init($url);
         //a true, obtendremos una respuesta de la url, en otro caso,
@@ -68,15 +62,12 @@ class WebService
         curl_close($ch);
         if (!$response) {
             return false;
-        } else {
-            var_dump($response);
         }
+        return $this->responseDecode($response);
     }
 
-    public function sendDelete($url, $arryparam)
+    public function sendDelete($url, $data)
     {
-        //datos a enviar
-        $data = $arryparam;
         //url contra la que atacamos
         $ch = curl_init($url);
         //a true, obtendremos una respuesta de la url, en otro caso,
@@ -92,8 +83,12 @@ class WebService
         curl_close($ch);
         if (!$response) {
             return false;
-        } else {
-            var_dump($response);
         }
+        return $this->responseDecode($response);
+    }
+
+    private function responseDecode($response)
+    {
+        return json_decode($response);
     }
 }

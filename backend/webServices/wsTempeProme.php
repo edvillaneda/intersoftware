@@ -4,18 +4,15 @@ require_once('../../config/config.php');
 
 $new = new WebService();
 
-$data = array("id" => 69);
+$dataPost = array("id" => 2);
 
-
-$resultado = json_decode($new->sendPost($urlTempeProme, $data));
-
-$resultado = $resultado->{'Result'};
-
-$resultado = explode(":", $resultado);
+$data = $new->sendPost($urlTempeProme, $dataPost);
+$data = explode(":", $data->result);
 
 $jsonString = "";
-foreach ($resultado as $value) {
-   $jsonString .= "'$value', ";
+foreach ($data as $key => $value) {
+   $jsonString .= "'$value'";
+   $jsonString .= ($key + 1 < count($data)) ? ', ' : '';
 }
 
 echo "[" . $jsonString . "]";
