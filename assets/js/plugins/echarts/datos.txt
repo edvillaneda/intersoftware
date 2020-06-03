@@ -1,0 +1,1 @@
+['Lunes', 'Martes', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
