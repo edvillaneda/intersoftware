@@ -31,7 +31,5 @@ foreach ($data->results->interval->analytics as $key => $value) {
    $interval['titulo'][$cont] .= $key;
    $cont++;
 }
-print_r(json_encode($interval));
 
-
-echo "[" . $jsonString . "]";
+echo json_encode($interval);
