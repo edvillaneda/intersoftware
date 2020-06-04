@@ -39,7 +39,7 @@ El primer parámetro es la IP donde escuchará las conexiones:
 */
 
 // $chatServer = new SocketServer("localhost","9000");
-$chatServer = new SocketServer($socketUrl, $socketPort);
+$chatServer = new SocketServer(SOCKET_URL, SOCKET_PORT);
 
 try {
   $chatServer->run();

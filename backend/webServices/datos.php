@@ -14,7 +14,7 @@ $dataPost = array(
 );
 
 
-$data = $new->sendPost($urlWebService, $dataPost);
+$data = $new->sendPost(URL_WEB_SERVICE, $dataPost);
 
 $cont = 0;
 foreach ($data->results->interval->analytics as $key => $value) {
