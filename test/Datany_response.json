@@ -1,0 +1,868 @@
+{
+    "status": true,
+    "message": "success",
+    "camera_id": 10,
+    "capacity": 38,
+    "analysis_area": "150m2",
+    "results": {
+        "interval": {
+            "start_date": "2020-05-28 21:00:00.688705",
+            "end_date": "2020-05-30 21:32:00.688705",
+            "analytics": {
+                "events": 118,
+                "passerby": {
+                    "min": 0,
+                    "max": 60,
+                    "mean": 32.0,
+                    "std": 20.7
+                },
+                "safe": {
+                    "min": 0,
+                    "max": 58,
+                    "mean": 29.8,
+                    "std": 19.5
+                },
+                "1-2m": {
+                    "min": 0,
+                    "max": 7,
+                    "mean": 1.3,
+                    "std": 1.7
+                },
+                "0-1m": {
+                    "min": 0,
+                    "max": 5,
+                    "mean": 0.9,
+                    "std": 1.2
+                }
+            }
+        },
+        "data": [
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:18:06.891974",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 14,
+                "created_at": "20-05-29 21:18:12.037014",
+                "persons": 14,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 13,
+                "created_at": "20-05-29 21:18:16.750475",
+                "persons": 15,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 13,
+                "created_at": "20-05-29 21:18:21.614666",
+                "persons": 15,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 17,
+                "created_at": "20-05-29 21:18:27.021603",
+                "persons": 17,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 18,
+                "created_at": "20-05-29 21:18:32.261695",
+                "persons": 18,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 18,
+                "created_at": "20-05-29 21:18:37.184903",
+                "persons": 18,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 17,
+                "created_at": "20-05-29 21:18:42.064046",
+                "persons": 17,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 17,
+                "created_at": "20-05-29 21:18:46.665723",
+                "persons": 18,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 2,
+                "safe": 17,
+                "created_at": "20-05-29 21:18:51.839790",
+                "persons": 19,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 22,
+                "created_at": "20-05-29 21:18:57.067821",
+                "persons": 22,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 20,
+                "created_at": "20-05-29 21:19:02.018803",
+                "persons": 21,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 21,
+                "created_at": "20-05-29 21:19:07.896817",
+                "persons": 23,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 24,
+                "created_at": "20-05-29 21:19:13.209982",
+                "persons": 25,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 23,
+                "created_at": "20-05-29 21:19:18.594717",
+                "persons": 25,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 25,
+                "created_at": "20-05-29 21:19:24.045748",
+                "persons": 25,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 27,
+                "created_at": "20-05-29 21:19:30.184743",
+                "persons": 27,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 27,
+                "created_at": "20-05-29 21:19:36.102791",
+                "persons": 28,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 29,
+                "created_at": "20-05-29 21:19:42.567001",
+                "persons": 30,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 30,
+                "created_at": "20-05-29 21:19:48.420569",
+                "persons": 31,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 34,
+                "created_at": "20-05-29 21:19:54.246231",
+                "persons": 35,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 32,
+                "created_at": "20-05-29 21:20:00.392645",
+                "persons": 35,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 3,
+                "safe": 33,
+                "created_at": "20-05-29 21:20:06.811095",
+                "persons": 38,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 33,
+                "created_at": "20-05-29 21:20:13.148427",
+                "persons": 38,
+                "one_meter": 4
+            },
+            {
+                "two_meter": 2,
+                "safe": 37,
+                "created_at": "20-05-29 21:20:19.344122",
+                "persons": 39,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 37,
+                "created_at": "20-05-29 21:20:26.199772",
+                "persons": 38,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 2,
+                "safe": 39,
+                "created_at": "20-05-29 21:20:32.429978",
+                "persons": 41,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 3,
+                "safe": 39,
+                "created_at": "20-05-29 21:20:38.694543",
+                "persons": 42,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 2,
+                "safe": 38,
+                "created_at": "20-05-29 21:20:44.945087",
+                "persons": 43,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 2,
+                "safe": 43,
+                "created_at": "20-05-29 21:20:52.150113",
+                "persons": 45,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 42,
+                "created_at": "20-05-29 21:20:58.876759",
+                "persons": 44,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 41,
+                "created_at": "20-05-29 21:21:05.691577",
+                "persons": 44,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 42,
+                "created_at": "20-05-29 21:21:12.458282",
+                "persons": 46,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 2,
+                "safe": 44,
+                "created_at": "20-05-29 21:21:19.503949",
+                "persons": 47,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 3,
+                "safe": 44,
+                "created_at": "20-05-29 21:21:26.624355",
+                "persons": 48,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 2,
+                "safe": 46,
+                "created_at": "20-05-29 21:21:33.880013",
+                "persons": 49,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 5,
+                "safe": 44,
+                "created_at": "20-05-29 21:21:41.196488",
+                "persons": 50,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 47,
+                "created_at": "20-05-29 21:21:49.403961",
+                "persons": 49,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 3,
+                "safe": 45,
+                "created_at": "20-05-29 21:21:58.457105",
+                "persons": 51,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 5,
+                "safe": 44,
+                "created_at": "20-05-29 21:22:06.670247",
+                "persons": 51,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 3,
+                "safe": 44,
+                "created_at": "20-05-29 21:22:14.706365",
+                "persons": 50,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 4,
+                "safe": 44,
+                "created_at": "20-05-29 21:22:22.900067",
+                "persons": 49,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 47,
+                "created_at": "20-05-29 21:22:30.727414",
+                "persons": 50,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 47,
+                "created_at": "20-05-29 21:22:38.476823",
+                "persons": 50,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 48,
+                "created_at": "20-05-29 21:22:46.555496",
+                "persons": 51,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 3,
+                "safe": 44,
+                "created_at": "20-05-29 21:22:54.703334",
+                "persons": 52,
+                "one_meter": 5
+            },
+            {
+                "two_meter": 7,
+                "safe": 42,
+                "created_at": "20-05-29 21:23:03.373647",
+                "persons": 52,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 1,
+                "safe": 45,
+                "created_at": "20-05-29 21:23:11.323363",
+                "persons": 50,
+                "one_meter": 4
+            },
+            {
+                "two_meter": 4,
+                "safe": 38,
+                "created_at": "20-05-29 21:23:18.727471",
+                "persons": 46,
+                "one_meter": 4
+            },
+            {
+                "two_meter": 4,
+                "safe": 40,
+                "created_at": "20-05-29 21:23:25.712138",
+                "persons": 45,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 44,
+                "created_at": "20-05-29 21:23:33.975477",
+                "persons": 45,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 5,
+                "safe": 39,
+                "created_at": "20-05-29 21:23:42.942244",
+                "persons": 44,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 5,
+                "safe": 40,
+                "created_at": "20-05-29 21:23:53.402720",
+                "persons": 45,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 3,
+                "safe": 42,
+                "created_at": "20-05-29 21:24:01.941492",
+                "persons": 46,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 3,
+                "safe": 43,
+                "created_at": "20-05-29 21:24:10.602140",
+                "persons": 48,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 6,
+                "safe": 39,
+                "created_at": "20-05-29 21:24:18.363306",
+                "persons": 45,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 45,
+                "created_at": "20-05-29 21:24:26.278917",
+                "persons": 48,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 4,
+                "safe": 42,
+                "created_at": "20-05-29 21:24:33.367241",
+                "persons": 46,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 6,
+                "safe": 41,
+                "created_at": "20-05-29 21:24:40.684928",
+                "persons": 47,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 5,
+                "safe": 41,
+                "created_at": "20-05-29 21:24:47.776888",
+                "persons": 47,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 1,
+                "safe": 45,
+                "created_at": "20-05-29 21:24:55.741298",
+                "persons": 47,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 2,
+                "safe": 46,
+                "created_at": "20-05-29 21:25:03.737366",
+                "persons": 49,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 3,
+                "safe": 46,
+                "created_at": "20-05-29 21:25:11.785875",
+                "persons": 52,
+                "one_meter": 3
+            },
+            {
+                "two_meter": 5,
+                "safe": 49,
+                "created_at": "20-05-29 21:25:19.968457",
+                "persons": 54,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 54,
+                "created_at": "20-05-29 21:25:29.345958",
+                "persons": 54,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 2,
+                "safe": 53,
+                "created_at": "20-05-29 21:25:40.730479",
+                "persons": 55,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 53,
+                "created_at": "20-05-29 21:25:49.635815",
+                "persons": 54,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 3,
+                "safe": 53,
+                "created_at": "20-05-29 21:25:58.216126",
+                "persons": 56,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 55,
+                "created_at": "20-05-29 21:26:07.058292",
+                "persons": 57,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 57,
+                "created_at": "20-05-29 21:26:16.089423",
+                "persons": 58,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 56,
+                "created_at": "20-05-29 21:26:24.798772",
+                "persons": 59,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 1,
+                "safe": 56,
+                "created_at": "20-05-29 21:26:33.581663",
+                "persons": 59,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 5,
+                "safe": 50,
+                "created_at": "20-05-29 21:26:42.494927",
+                "persons": 59,
+                "one_meter": 4
+            },
+            {
+                "two_meter": 2,
+                "safe": 54,
+                "created_at": "20-05-29 21:26:51.431388",
+                "persons": 56,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 58,
+                "created_at": "20-05-29 21:27:00.185135",
+                "persons": 58,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 57,
+                "created_at": "20-05-29 21:27:09.438525",
+                "persons": 60,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 2,
+                "safe": 57,
+                "created_at": "20-05-29 21:27:19.762912",
+                "persons": 59,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 58,
+                "created_at": "20-05-29 21:27:29.057731",
+                "persons": 58,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 57,
+                "created_at": "20-05-29 21:27:38.172589",
+                "persons": 57,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 57,
+                "created_at": "20-05-29 21:27:46.701930",
+                "persons": 57,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 57,
+                "created_at": "20-05-29 21:27:56.006405",
+                "persons": 57,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 54,
+                "created_at": "20-05-29 21:28:05.715788",
+                "persons": 57,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 3,
+                "safe": 55,
+                "created_at": "20-05-29 21:28:14.714484",
+                "persons": 58,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 58,
+                "created_at": "20-05-29 21:28:23.526161",
+                "persons": 58,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 0,
+                "created_at": "20-05-29 21:30:10.208730",
+                "persons": 0,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 9,
+                "created_at": "20-05-29 21:30:13.506221",
+                "persons": 9,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 3,
+                "created_at": "20-05-29 21:30:15.192820",
+                "persons": 3,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:16.853452",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 2,
+                "created_at": "20-05-29 21:30:18.575693",
+                "persons": 4,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 2,
+                "safe": 1,
+                "created_at": "20-05-29 21:30:20.351161",
+                "persons": 3,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 3,
+                "created_at": "20-05-29 21:30:21.967196",
+                "persons": 3,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:23.522406",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 4,
+                "created_at": "20-05-29 21:30:25.078427",
+                "persons": 4,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 6,
+                "created_at": "20-05-29 21:30:26.676637",
+                "persons": 6,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:28.308703",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:29.858970",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:31.478164",
+                "persons": 6,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 6,
+                "created_at": "20-05-29 21:30:33.078410",
+                "persons": 6,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 2,
+                "safe": 1,
+                "created_at": "20-05-29 21:30:34.783242",
+                "persons": 5,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 2,
+                "safe": 1,
+                "created_at": "20-05-29 21:30:36.620508",
+                "persons": 4,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:38.296378",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 8,
+                "created_at": "20-05-29 21:30:39.848777",
+                "persons": 8,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:41.390643",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:42.988336",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:44.573952",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:46.195481",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:47.804208",
+                "persons": 8,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 2,
+                "safe": 4,
+                "created_at": "20-05-29 21:30:49.565977",
+                "persons": 6,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:51.236636",
+                "persons": 5,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 4,
+                "created_at": "20-05-29 21:30:52.857003",
+                "persons": 5,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:30:54.540804",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 4,
+                "created_at": "20-05-29 21:30:56.099913",
+                "persons": 4,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 5,
+                "created_at": "20-05-29 21:30:57.700789",
+                "persons": 6,
+                "one_meter": 1
+            },
+            {
+                "two_meter": 0,
+                "safe": 6,
+                "created_at": "20-05-29 21:30:59.354488",
+                "persons": 6,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 7,
+                "created_at": "20-05-29 21:31:01.096893",
+                "persons": 7,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 1,
+                "safe": 3,
+                "created_at": "20-05-29 21:31:03.054809",
+                "persons": 6,
+                "one_meter": 2
+            },
+            {
+                "two_meter": 0,
+                "safe": 4,
+                "created_at": "20-05-29 21:31:04.858773",
+                "persons": 4,
+                "one_meter": 0
+            },
+            {
+                "two_meter": 0,
+                "safe": 3,
+                "created_at": "20-05-29 21:31:06.516311",
+                "persons": 4,
+                "one_meter": 1
+            }
+        ]
+    }
+}
