@@ -1,11 +1,13 @@
 <?php
 
 // Configuracion de Sockets
-$socketUrl = 'localhost';
-$socketPort = '9000';
+define('SOCKET_URL', 'localhost');
+define('SOCKET_PORT', '9000');
 
 // Configuracion de WebServices
 
 // WS Temperatura Promedio
-$urlWebService = 'http://localhost/intersoftware/test/wsTest.php';
-$urlTempeProme = 'http://localhost/intersoftware/test/wsTest.php';
+define('URL_WEB_SERVICE', 'http://localhost/intersoftware/test/wsTest.php');
+
+// Configuraciones Globales
+define('CHART_LINES_COLUMNS', 14);
