@@ -10,9 +10,11 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>InterSoftware</title>
+    <title>Intersoftware</title>
     <!-- Bootstrap Core CSS -->
-    <link href="assets/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Calendar CSS -->
+    <link href="assets/js/plugins/calendar/dist/fullcalendar.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
@@ -23,12 +25,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <script src="assets/js/push.min.js"></script>
-    <script src="assets/js/socket.js"></script>
-
 </head>
 
-<body onload="init()" class="fix-header card-no-border">
+<body class="fix-header card-no-border">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -55,13 +54,13 @@
                             <!-- Dark Logo icon -->
                             <img src="assets/images/logois.png" style="height: 60px;" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-
+                            
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
-                            <!-- dark Logo text -->
-
-
+                         <!-- dark Logo text -->
+                        
+                         
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -75,7 +74,7 @@
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"></a> </li>
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"> </li>
                         <!-- ============================================================== -->
-
+                        
                         <!-- ============================================================== -->
                         <!-- End Messages -->
                         <!-- ============================================================== -->
@@ -91,17 +90,16 @@
                             <form class="app-search">
                                 <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
                         </li>
-
+                        
                         <!-- ============================================================== -->
                         <!-- Language -->
                         <!-- ============================================================== -->
-
+                        
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/5.jpg"
-                                    alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/5.jpg" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
@@ -109,12 +107,11 @@
                                             <div class="u-img"><img src="assets/images/5.jpg" alt="user"></div>
                                             <div class="u-text">
                                                 <h4>Juan Rendón</h4>
-                                                <p class="text-muted">juan.rendon@intersoftware.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">Ver perfil</a>
-                                            </div>
+                                                <p class="text-muted">juan.rendon@intersoftware.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">Ver perfil</a></div>
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
-
+                                    
                                     <li><a href="#"><i class="fa fa-power-off"></i> Salir</a></li>
                                 </ul>
                             </div>
@@ -169,33 +166,33 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
-
-                        <li> <a class="has-arrow waves-effect waves-dark" href="dashboard.html"><i class="mdi mdi-gauge"></i><span class="hide-menu">Mi establecimiento </span></a>
+                        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="dashboard.html" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Mi establecimiento </span></a>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="calendario.html"><i class="mdi mdi-calendar"></i><span class="hide-menu">Calendario</span></a>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="alertas.html"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Alertas</span></a>
-
+                        <li> <a class="has-arrow waves-effect waves-dark" href="calendario.html" ><i class="mdi mdi-calendar"></i><span class="hide-menu">Calendario</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="alertas.html" ><i class="mdi mdi-bullseye"></i><span class="hide-menu">Alertas</span></a>
+                            
                         </li>
-
-                        <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html"><i class="mdi mdi-table"></i><span class="hide-menu">Resumen</span></a>
-
+                        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html" ><i class="mdi mdi-table"></i><span class="hide-menu">Resumen</span></a>
+                           
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="table.html"><i class="mdi mdi-widgets"></i><span class="hide-menu">Reportes</span></a>
-
+                        <li> <a class="has-arrow waves-effect waves-dark" href="table.html" ><i class="mdi mdi-widgets"></i><span class="hide-menu">Reportes</span></a>
+                      
                         </li>
-
-                        <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Histórico</span></a>
-
+             
+                        <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html" ><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Histórico</span></a>
+                            
                         </li>
                         <li class="nav-small-cap">DEMO</li>
-
-                        <li> <a class="has-arrow waves-effect waves-dark" href="video.html"><i class="mdi mdi-file-chart"></i><span class="hide-menu">Streaming</span></a>
-
+                        
+                        <li> <a class="has-arrow waves-effect waves-dark" href="video.html" ><i class="mdi mdi-file-chart"></i><span class="hide-menu">Streaming</span></a>
+                            
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="mapa.html"><i class="mdi mdi-pin"></i><span class="hide-menu">Georeferenciación</span></a>
-
+                        <li> <a class="has-arrow waves-effect waves-dark" href="mapa.html" ><i class="mdi mdi-pin"></i><span class="hide-menu">Georeferenciación</span></a>
+                           
                         </li>
-
+                        
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -210,107 +207,81 @@
         <!-- ============================================================== -->
         <div class="page-wrapper">
             <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <br>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
+            
             <div class="container-fluid">
-
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Temperatura promedio de personas por día</h4>
-                                <div id="main" style="width:100%; height:300px;"></div>
-
-                                <button type="button" id="filtro">Reporte</button>
-
+                            <div class="">
+                                <div class="row">
+                                    
+                                    <div class="col-md-12">
+                                        <div class="card-body b-l calender-sidebar">
+                                            <div id="calendar"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- column -->
-                    <!-- column -->
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Cantidad de personas en el establecimiento</h4>
-                                <div id="bar-chart" style="width:100%; height:300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" style="display: none;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Temperatura</h4>
-                                <div id="gauge2-chart" style="width:100%; height:300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <!-- column -->
-                    <div class="col-lg-12" style="display: none;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Monthly Salary Chart</h4>
-                                <div id="pie-chart" style="width:100%; height:400px;"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- column -->
-
-                    <!-- column -->
-                    <!-- column -->
-                    <div class="col-lg-6" style="display: none;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Radar Chart</h4>
-                                <div id="radar-chart" style="width:100%; height:300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Doughnut Chart</h4>
-                                <label> Fecha inicio
-                                    <input type="date" id="dateInitChart" name="dateInitChart">
-                                </label>
-                                <label> Fecha fin
-                                    <input type="date" id="dateEndChart" name="dateEndChart">
-                                </label>
-                                <div id="doughnut-chart" style="width:100%; height:300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <!-- column -->
-                    <div class="col-lg-6" style="display: none;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Internet Speed</h4>
-                                <div id="gauge-chart" style="width:100%; height:300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <!-- column -->
-
-                    <!-- column -->
                 </div>
+                <!-- BEGIN MODAL -->
+                <div class="modal none-border" id="my-event">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Add Event</strong></h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Add Category -->
+                <div class="modal fade none-border" id="add-new-event">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Add</strong> a category</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="control-label">Category Name</label>
+                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="control-label">Choose Category Color</label>
+                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                <option value="success">Success</option>
+                                                <option value="danger">Danger</option>
+                                                <option value="info">Info</option>
+                                                <option value="primary">Primary</option>
+                                                <option value="warning">Warning</option>
+                                                <option value="inverse">Inverse</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MODAL -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -396,9 +367,9 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="assets/js/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/js/plugins/calendar/jquery-ui.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/js/plugins/bootstrap/js/popper.min.js"></script>
-
     <script src="assets/js/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="assets/js/jquery.slimscroll.js"></script>
@@ -411,12 +382,11 @@
     <script src="assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="assets/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- Chart JS -->
-    <script src="assets/js/plugins/echarts/echarts-all.js"></script>
-    <script src="assets/js/plugins/echarts/echarts-init.js"></script>
+    <!-- Calendar JavaScript -->
+    <script src="assets/js/plugins/calendar/jquery-ui.min.js"></script>
+    <script src="assets/js/plugins/moment/moment.js"></script>
+    <script src='assets/js/plugins/calendar/dist/fullcalendar.min.js'></script>
+    <script src="assets/js/plugins/calendar/dist/cal-init.js"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
