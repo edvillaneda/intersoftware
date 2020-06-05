@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // Create Sever
   $server = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
   socket_set_option($server, SOL_SOCKET, SO_REUSEADDR, 1);
-  socket_bind($server, $socketUrl, $socketPort);
+  socket_bind($server, SOCKET_URL, SOCKET_PORT);
   socket_listen($server);
 
   // Create Client
