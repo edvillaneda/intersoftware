@@ -1,22 +1,9 @@
-// ============================================================== 
+// ==============================================================
 // Cargar datos
-// ============================================================== 
+// ==============================================================
 function HolaJuan()
 {
-	alert("Generación de reporte");
-}
-function pedirDatos(fuenteDatos)
-{
-	objetico = "";
-		xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-		  objetico = eval(xmlhttp.responseText);
-		}
-	  };
-	  xmlhttp.open("GET", fuenteDatos,false);
-	  xmlhttp.send();
-  return objetico;
+    alert("Generación de reporte");
 }
 
 //Path del directorio del backend
@@ -25,43 +12,54 @@ var path = url + "/../backend/webServices/";
 
 function LineChartXAxis()
 {
-	return respuesta = pedirDatos("/backend/datos.php");
+    return respuesta = pedirDatos(path +"datos.php");
+}
+
+function pedirDatos(fuenteDatos)
+{
+    objetico = "";
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          objetico = eval(xmlhttp.responseText);
+        }
+      };
+      xmlhttp.open("GET", fuenteDatos,false);
+      xmlhttp.send();
+  return objetico;
 }
 
 function getDoughnutData() {
     response = "";
-		xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            response = JSON.parse(xmlhttp.responseText);          
-		}
-	  };
-	  xmlhttp.open("GET", path + 'doughnut.php',false);
-	  xmlhttp.send();
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            response = JSON.parse(xmlhttp.responseText);
+        }
+      };
+      xmlhttp.open("GET", path + 'doughnut.php',false);
+      xmlhttp.send();
   return response;
 }
 
 function getLineData() {
     response = "";
-		xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            response = JSON.parse(xmlhttp.responseText);          
-		}
-	  };
-	  xmlhttp.open("GET", path + 'lines.php',false);
-	  xmlhttp.send();
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            response = JSON.parse(xmlhttp.responseText);
+        }
+      };
+      xmlhttp.open("GET", path + 'lines.php',false);
+      xmlhttp.send();
   return response;
 }
 
-
-
-// ============================================================== 
+// ==============================================================
 // Bar chart option
-// ============================================================== 
+// ==============================================================
 var myChart = echarts.init(document.getElementById('bar-chart'));
 var linesData = getLineData();
-console.log('Data: ' + linesData);
 
 function getYLinesData() {
     var array = [];
@@ -92,7 +90,7 @@ option = {
     toolbox: {
         show : true,
         feature : {
-            
+
             magicType : {show: true, type: ['line', 'bar']},
             restore : {show: true},
             saveAsImage : {show: true}
@@ -115,7 +113,7 @@ option = {
         {
             name:'Cámara A',
             type:'bar',
-            data: getPointsLinesData(), 
+            data: getPointsLinesData(),
             markPoint : {
                 data : [
                     {type : 'max', name: 'Max'},
@@ -130,7 +128,7 @@ option = {
         },
     ]
 };
-                    
+
 
 // use configuration item and data specified to show chart
 myChart.setOption(option, true), $(function() {
@@ -142,9 +140,9 @@ myChart.setOption(option, true), $(function() {
             $(window).on("resize", resize), $(".sidebartoggler").on("click", resize)
         });
 
-// ============================================================== 
+// ==============================================================
 // Line chart
-// ============================================================== 
+// ==============================================================
 $("#filtro").on("click",HolaJuan);
 var dom = document.getElementById("main");
 var mytempChart = echarts.init(dom);
@@ -152,7 +150,7 @@ var datos = LineChartXAxis();
 var app = {};
 option = null;
 option = {
-   
+
     tooltip : {
         trigger: 'axis'
     },
@@ -204,10 +202,10 @@ option = {
                         shadowColor : 'rgba(0,0,0,0.3)',
                         shadowBlur: 10,
                         shadowOffsetX: 8,
-                        shadowOffsetY: 8 
+                        shadowOffsetY: 8
                     }
                 }
-            },        
+            },
             markLine : {
                 data : [
                     {type : 'average', name: 'Average'}
@@ -229,10 +227,10 @@ option = {
                         shadowColor : 'rgba(0,0,0,0.3)',
                         shadowBlur: 10,
                         shadowOffsetX: 8,
-                        shadowOffsetY: 8 
+                        shadowOffsetY: 8
                     }
                 }
-            }, 
+            },
             markLine : {
                 data : [
                     {type : 'average', name : 'Average'}
@@ -253,14 +251,14 @@ if (option && typeof option === "object") {
         });
 }
 
-// ============================================================== 
+// ==============================================================
 // Pie chart option
-// ============================================================== 
+// ==============================================================
 var pieChart = echarts.init(document.getElementById('pie-chart'));
 
 // specify chart configuration item and data
 option = {
-   
+
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -273,10 +271,10 @@ option = {
     toolbox: {
         show : true,
         feature : {
-            
+
             dataView : {show: true, readOnly: false},
             magicType : {
-                show: true, 
+                show: true,
                 type: ['pie', 'funnel']
             },
             restore : {show: true},
@@ -345,8 +343,8 @@ option = {
         }
     ]
 };
-                    
-                    
+
+
 
 // use configuration item and data specified to show chart
 pieChart.setOption(option, true), $(function() {
@@ -358,15 +356,15 @@ pieChart.setOption(option, true), $(function() {
             $(window).on("resize", resize), $(".sidebartoggler").on("click", resize)
         });
 
-// ============================================================== 
+// ==============================================================
 // Radar chart option
-// ============================================================== 
+// ==============================================================
 var radarChart = echarts.init(document.getElementById('radar-chart'));
 
 // specify chart configuration item and data
 
 option = {
-    
+
     tooltip : {
         trigger: 'axis'
     },
@@ -415,9 +413,9 @@ option = {
         }
     ]
 };
-                    
-                    
-                    
+
+
+
 
 // use configuration item and data specified to show chart
 radarChart.setOption(option, true), $(function() {
@@ -429,9 +427,9 @@ radarChart.setOption(option, true), $(function() {
             $(window).on("resize", resize), $(".sidebartoggler").on("click", resize)
         });
 
-// ============================================================== 
+// ==============================================================
 // doughnut chart option
-// ============================================================== 
+// ==============================================================
 var doughnutChart = echarts.init(document.getElementById('doughnut-chart'));
 var doughnutData = getDoughnutData();
 
@@ -464,7 +462,7 @@ option = {
         feature : {
             dataView : {show: true, readOnly: false},
             magicType : {
-                show: true, 
+                show: true,
                 type: ['pie', 'funnel'],
                 option: {
                     funnel: {
@@ -510,8 +508,8 @@ option = {
         }
     ]
 };
-                                    
-                    
+
+
 
 // use configuration item and data specified to show chart
 doughnutChart.setOption(option, true), $(function() {
@@ -523,9 +521,9 @@ doughnutChart.setOption(option, true), $(function() {
             $(window).on("resize", resize), $(".sidebartoggler").on("click", resize)
         });
 
-// ============================================================== 
+// ==============================================================
 // Gauge chart option
-// ============================================================== 
+// ==============================================================
 var gaugeChart = echarts.init(document.getElementById('gauge-chart'));
 
 // specify chart configuration item and data
@@ -549,11 +547,11 @@ option = {
             data:[{value: 50, name: 'Speed'}],
             axisLine: {            // 坐标轴线
                 lineStyle: {       // 属性lineStyle控制线条样式
-                    color: [[0.2, '#55ce63'],[0.8, '#009efb'],[1, '#f62d51']], 
-                    
+                    color: [[0.2, '#55ce63'],[0.8, '#009efb'],[1, '#f62d51']],
+
                 }
             },
-            
+
         }
     ]
 };
@@ -561,7 +559,7 @@ timeTicket = setInterval(function (){
     option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
     gaugeChart.setOption(option, true);
 },2000);
-                                   
+
 
 // use configuration item and data specified to show chart
 gaugeChart.setOption(option, true), $(function() {
@@ -573,9 +571,9 @@ gaugeChart.setOption(option, true), $(function() {
             $(window).on("resize", resize), $(".sidebartoggler").on("click", resize)
         });
 
-// ============================================================== 
+// ==============================================================
 // Radar chart option
-// ============================================================== 
+// ==============================================================
 var gauge2Chart = echarts.init(document.getElementById('gauge2-chart'));
 
 // specify chart configuration item and data
@@ -597,7 +595,7 @@ option = {
             splitNumber: 10,       // 分割段数，默认为5
             axisLine: {            // 坐标轴线
                 lineStyle: {       // 属性lineStyle控制线条样式
-                    color: [[0.2, '#55ce63'],[0.8, '#009efb'],[1, '#f62d51']], 
+                    color: [[0.2, '#55ce63'],[0.8, '#009efb'],[1, '#f62d51']],
                     width: 8
                 }
             },
@@ -647,7 +645,7 @@ timeTicket = setInterval(function (){
     option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
     gauge2Chart.setOption(option,true);
 },2000)
-                                                 
+
 
 // use configuration item and data specified to show chart
 gauge2Chart.setOption(option, true), $(function() {
