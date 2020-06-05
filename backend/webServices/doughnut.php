@@ -16,11 +16,13 @@ $dataPost = array(
 $data = $new->sendPost(URL_WEB_SERVICE, $dataPost);
 
 $cont = 0;
+$interval = array();
 foreach ($data->results->interval->analytics as $key => $value) {
    $llave = false;
    switch ($key) {
       case 'events':
-         $interval['valor'][$cont] .= $value;
+         // $interval['valor'][$cont] .= $value;
+         continue;
          break;
 
       default:
