@@ -20,7 +20,8 @@ function pedirDatos(fuenteDatos)
 }
 
 //Path del directorio del backend
-var path = "/bioseguridad/intersoftware/backend/webServices/";
+var url = window.location.href
+var path = url + "/../backend/webServices/";
 
 function LineChartXAxis()
 {
