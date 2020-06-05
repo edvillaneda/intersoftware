@@ -24,7 +24,18 @@ function LineChartXAxis()
 	return respuesta = pedirDatos("../../../../backend/datos.php");
 }
 
-
+function getDoughnutData() {
+    response = "";
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            response = JSON.parse(xmlhttp.responseText);          
+		}
+	  };
+	  xmlhttp.open("GET", 'http://localhost:8080/bioseguridad/intersoftware/backend/webServices/doughnut.php',false);
+	  xmlhttp.send();
+  return response;
+}
 
 
 
@@ -401,6 +412,18 @@ radarChart.setOption(option, true), $(function() {
 // doughnut chart option
 // ============================================================== 
 var doughnutChart = echarts.init(document.getElementById('doughnut-chart'));
+var doughnutData = getDoughnutData();
+console.log('Data: ' + doughnutData);
+
+function getArray() {
+    var array = [];
+    for(var i= 0; i< doughnutData.valor.length; i++) {
+        let key = {value: doughnutData.valor[i], name: doughnutData.titulo[i]};
+        array.push(key)
+    }
+    return array;
+}
+console.log(getArray());
 
 // specify chart configuration item and data
 
@@ -412,7 +435,7 @@ option = {
     legend: {
         orient : 'vertical',
         x : 'left',
-        data:['Item A','Item B','Item C','Item D','Item E']
+        data:['events','passerby','safe','1-2m','0-1m']
     },
     toolbox: {
         show : true,
@@ -461,13 +484,7 @@ option = {
                     }
                 }
             },
-            data:[
-                {value:335, name:'Item A'},
-                {value:310, name:'Item B'},
-                {value:234, name:'Item C'},
-                {value:135, name:'Item D'},
-                {value:1548, name:'Item E'}
-            ]
+            data: getArray()
         }
     ]
 };
