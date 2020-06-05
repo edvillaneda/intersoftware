@@ -21,7 +21,7 @@ function init() {
       Push.create("Aforo Supera " + msg.data + " personas", {
         //Titulo de la notificación
         body: "Presenta un Aforo de " + msg.data + " personas", //Texto del cuerpo de la notificación
-        icon: "img/alert.png", //Icono de la notificación
+        icon: "assets/images/alert.png", //Icono de la notificación
         timeout: 10000, //Tiempo de duración de la notificación
         onClick: function () {
           //Función que se cumple al realizar clic cobre la notificación
