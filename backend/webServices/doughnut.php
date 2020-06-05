@@ -17,17 +17,13 @@ $data = $new->sendPost(URL_WEB_SERVICE, $dataPost);
 
 $cont = 0;
 foreach ($data->results->interval->analytics as $key => $value) {
-   $llave = false;
-   switch ($key) {
-      case 'events':
-         $interval['valor'][$cont] .= $value;
-         break;
 
-      default:
-         $interval['valor'][$cont] .= $value->mean;
-         break;
+   if ($key == 'events') {
+      continue;
    }
-   $interval['titulo'][$cont] .= $key;
+
+   $interval['titulo'][$cont] .= ucfirst($key);
+   $interval['valor'][$cont] .= $value->mean;
    $cont++;
 }
 
