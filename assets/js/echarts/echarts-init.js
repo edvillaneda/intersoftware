@@ -19,6 +19,9 @@ function pedirDatos(fuenteDatos)
   return objetico;
 }
 
+//Path del directorio del backend
+var path = "/bioseguridad/intersoftware/backend/webServices/";
+
 function LineChartXAxis()
 {
 	return respuesta = pedirDatos("/backend/datos.php");
@@ -32,7 +35,7 @@ function getDoughnutData() {
             response = JSON.parse(xmlhttp.responseText);          
 		}
 	  };
-	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/doughnut.php',false);
+	  xmlhttp.open("GET", path + 'doughnut.php',false);
 	  xmlhttp.send();
   return response;
 }
@@ -45,7 +48,7 @@ function getLineData() {
             response = JSON.parse(xmlhttp.responseText);          
 		}
 	  };
-	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/lines.php',false);
+	  xmlhttp.open("GET", path + 'lines.php',false);
 	  xmlhttp.send();
   return response;
 }
