@@ -3,7 +3,7 @@
 // ============================================================== 
 function HolaJuan()
 {
-	alert("Hgalo usted");
+	alert("Generación de reporte");
 }
 function pedirDatos(fuenteDatos)
 {
@@ -21,7 +21,7 @@ function pedirDatos(fuenteDatos)
 
 function LineChartXAxis()
 {
-	return respuesta = pedirDatos("../../../../backend/datos.php");
+	return respuesta = pedirDatos("/backend/datos.php");
 }
 
 function getDoughnutData() {
@@ -32,7 +32,20 @@ function getDoughnutData() {
             response = JSON.parse(xmlhttp.responseText);          
 		}
 	  };
-	  xmlhttp.open("GET", 'http://localhost:8080/bioseguridad/intersoftware/backend/webServices/doughnut.php',false);
+	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/doughnut.php',false);
+	  xmlhttp.send();
+  return response;
+}
+
+function getLineData() {
+    response = "";
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            response = JSON.parse(xmlhttp.responseText);          
+		}
+	  };
+	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/lines.php',false);
 	  xmlhttp.send();
   return response;
 }
@@ -43,6 +56,26 @@ function getDoughnutData() {
 // Bar chart option
 // ============================================================== 
 var myChart = echarts.init(document.getElementById('bar-chart'));
+var linesData = getLineData();
+console.log('Data: ' + linesData);
+
+function getYLinesData() {
+    var array = [];
+    for(var i= 0; i< linesData.created_at.length; i++) {
+        let key = {value: linesData.created_at[i].split('.')[0]};
+        array.push(key)
+    }
+    return array;
+}
+
+function getPointsLinesData() {
+    var array = [];
+    for(var i= 0; i< linesData.persons.length; i++) {
+        let key = {value: Math.round((linesData.persons[i]) * 100)/100 };
+        array.push(key)
+    }
+    return array;
+}
 
 // specify chart configuration item and data
 option = {
@@ -50,7 +83,7 @@ option = {
         trigger: 'axis'
     },
     legend: {
-        data:['Sala A','Sala B']
+        data:['Cámara A']
     },
     toolbox: {
         show : true,
@@ -66,7 +99,7 @@ option = {
     xAxis : [
         {
             type : 'category',
-            data : ['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sept','Oct','Nov','Dec']
+            data : getYLinesData()
         }
     ],
     yAxis : [
@@ -76,9 +109,9 @@ option = {
     ],
     series : [
         {
-            name:'Sala A',
+            name:'Cámara A',
             type:'bar',
-            data:[32.0, 34.9, 37.0, 23.69, 25.6, 38.7, 35.6, 40.2, 32.6, 30.0, 36.4, 33.3],
+            data: getPointsLinesData(), 
             markPoint : {
                 data : [
                     {type : 'max', name: 'Max'},
@@ -91,22 +124,6 @@ option = {
                 ]
             }
         },
-        {
-            name:'Sala B',
-            type:'bar',
-            data:[32.6, 35.9, 39.0, 36.4, 38.7, 30.7, 35.6, 40.2, 38.7, 38.8, 36.0, 32.3],
-            markPoint : {
-                data : [
-                    {name : 'Peligro', value : 42.2, xAxis: 7, yAxis: 43, symbolSize:18},
-                    {name : 'Error', value : 22.3, xAxis: 11, yAxis: 23}
-                ]
-            },
-            markLine : {
-                data : [
-                    {type : 'average', name : 'Average'}
-                ]
-            }
-        }
     ]
 };
                     
@@ -413,7 +430,6 @@ radarChart.setOption(option, true), $(function() {
 // ============================================================== 
 var doughnutChart = echarts.init(document.getElementById('doughnut-chart'));
 var doughnutData = getDoughnutData();
-console.log('Data: ' + doughnutData);
 
 function getArray() {
     var array = [];
@@ -423,7 +439,6 @@ function getArray() {
     }
     return array;
 }
-console.log(getArray());
 
 // specify chart configuration item and data
 
@@ -435,7 +450,7 @@ option = {
     legend: {
         orient : 'vertical',
         x : 'left',
-        data:['events','passerby','safe','1-2m','0-1m']
+        data:['Passerby','Safe','1-2m','0-1m']
     },
     toolbox: {
         show : true,
