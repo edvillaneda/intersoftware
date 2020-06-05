@@ -32,6 +32,7 @@ function getDoughnutData() {
             response = JSON.parse(xmlhttp.responseText);          
 		}
 	  };
+
 	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/doughnut.php',false);
 	  xmlhttp.send();
   return response;
@@ -46,6 +47,7 @@ function getLineData() {
 		}
 	  };
 	  xmlhttp.open("GET", '/bioseguridad/intersoftware/backend/webServices/lines.php',false);
+
 	  xmlhttp.send();
   return response;
 }
@@ -431,6 +433,7 @@ radarChart.setOption(option, true), $(function() {
 var doughnutChart = echarts.init(document.getElementById('doughnut-chart'));
 var doughnutData = getDoughnutData();
 
+
 function getArray() {
     var array = [];
     for(var i= 0; i< doughnutData.valor.length; i++) {
@@ -439,6 +442,7 @@ function getArray() {
     }
     return array;
 }
+
 
 // specify chart configuration item and data
 
@@ -450,6 +454,7 @@ option = {
     legend: {
         orient : 'vertical',
         x : 'left',
+
         data:['Passerby','Safe','1-2m','0-1m']
     },
     toolbox: {
