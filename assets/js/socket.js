@@ -11,33 +11,33 @@ var socket;
 
 function init() {
 	// Apuntar a la IP/Puerto configurado en el contructor del WebServerSocket, que es donde está escuchando el socket.
-	var host = "ws://localhost:9000"; 
+	var host = "ws://localhost:9000";
 	try {
 		socket = new WebSocket(host);
 		/*log('WebSocket - status jk '+socket.readyState);*/
-		/*socket.onopen    = function(msg) { 
-							   log("Welcome - status "+this.readyState); 
+		/*socket.onopen    = function(msg) {
+							   log("Welcome - status "+this.readyState);
 						   };*/
-		socket.onmessage = function(msg) 
-		{ 
+		socket.onmessage = function(msg)
+		{
 		    Push.create("Aforo Supera "+msg.data+" personas", { //Titulo de la notificación
 			body: "Presenta un Aforo de "+msg.data+" personas", //Texto del cuerpo de la notificación
 			icon: 'img/alert.png', //Icono de la notificación
 			timeout: 10000, //Tiempo de duración de la notificación
 			onClick: function () {//Función que se cumple al realizar clic cobre la notificación
-				window.location = "http://localhost/intersoftware/main/alertas.html?aforo="+msg.data; //Redirige a la siguiente web
+				window.location = "http://localhost/intersoftware/alertas.html?aforo="+msg.data; //Redirige a la siguiente web
 				this.close(); //Cierra la notificación
 			}
 		});
-						   
+
 		};
-		/*socket.onclose   = function(msg) { 
-							   log("Disconnected - status "+this.readyState); 
+		/*socket.onclose   = function(msg) {
+							   log("Disconnected - status "+this.readyState);
 						   };*/
 	}
-	catch(ex){ 
-		log(ex); 
+	catch(ex){
+		log(ex);
 	}
 	$("msg").focus();
-	setTimeout(init,1000);	
+	setTimeout(init,1000);
 }
