@@ -6,18 +6,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (isset($_GET['aforo']) || isset($_GET['temperatura'])) {
 
     $aforo = $_GET['aforo'];
-    $aforo = $_GET['aforo'];
     $temp = $_GET['temperatura'];
     $content = "";
 
     if ($aforo) {
-      // $content = "Aforo Supera $aforo personas";
-      $caontent = json_encode(array("titulo" => "aforo", "valor" => $aforo));
+      $content = json_encode(array("titulo" => "aforo", "valor" => $aforo));
     }
 
-    if (isset($_GET['temperatura'])) {
-      // $content = "Hemos detectado una temperatura mayor a $temp ยบC";
-      $caontent = json_encode(array("titulo" => "temperatura", "valor" => $temp));
+    if ($temp) {
+      $content = json_encode(array("titulo" => "temperatura", "valor" => $temp));
     }
 
     // Create Sever
@@ -41,8 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $headers .= "Sec-WebSocket-Accept: $key\r\n\r\n";
     socket_write($client, $headers, strlen($headers));
 
-    $response = chr(129) . chr(strlen($caontent)) . $caontent;
-    // $response = chr(129) . chr(strlen($content)) . $content;
+    $response = chr(129) . chr(strlen($content)) . $content;
     socket_write($client, $response);
     socket_close($client);
     header("HTTP/1.1 200 OK");

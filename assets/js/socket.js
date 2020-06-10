@@ -19,12 +19,8 @@ function init() {
   try {
     socket = new WebSocket(host);
     socket.onmessage = function (msg) {
-      var title = "";
-      var value = "";
 
       var obj = JSON.parse(msg.data);
-      var title = obj.titulo;
-      var value = obj.valor;
 
       switch (obj.titulo) {
         case "aforo":
@@ -35,9 +31,6 @@ function init() {
             "Hemos detectado una temperatura mayor a " + obj.valor + "ºC";
           break;
       }
-
-      console.log("titulo" + title);
-      console.log("valor" + value);
 
       Push.create("Alerta de " + obj.titulo + "!!", {
         //Titulo de la notificación
