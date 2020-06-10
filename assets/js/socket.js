@@ -1,9 +1,10 @@
 function getParameterByName(name) {
-
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
     results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 var prodId = getParameterByName("aforo");
@@ -18,14 +19,35 @@ function init() {
   try {
     socket = new WebSocket(host);
     socket.onmessage = function (msg) {
-      Push.create("Aforo Supera " + msg.data + " personas", {
+      var title = "";
+      var value = "";
+
+      var obj = JSON.parse(msg.data);
+      var title = obj.titulo;
+      var value = obj.valor;
+
+      switch (obj.titulo) {
+        case "aforo":
+          message = "Aforo Supera " + obj.valor + " personas";
+          break;
+        case "temperatura":
+          message =
+            "Hemos detectado una temperatura mayor a " + obj.valor + "ºC";
+          break;
+      }
+
+      console.log("titulo" + title);
+      console.log("valor" + value);
+
+      Push.create("Alerta de " + obj.titulo + "!!", {
         //Titulo de la notificación
-        body: "Presenta un Aforo de " + msg.data + " personas", //Texto del cuerpo de la notificación
+        body: message, //Texto del cuerpo de la notificación
         icon: "assets/images/alert.png", //Icono de la notificación
         timeout: 10000, //Tiempo de duración de la notificación
         onClick: function () {
           //Función que se cumple al realizar clic cobre la notificación
-          window.location = "http://localhost/intersoftware/alertas.html?aforo=" + msg.data; //Redirige a la siguiente web
+          window.location =
+            "http://localhost/intersoftware/alertas.html?aforo=" + obj.valor; //Redirige a la siguiente web
           this.close(); //Cierra la notificación
         },
       });
