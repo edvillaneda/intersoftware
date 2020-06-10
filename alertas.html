@@ -54,13 +54,13 @@
                             <!-- Dark Logo icon -->
                             <img src="assets/images/logois.png" style="height: 60px;" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            
+
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                        
-                         
+
+
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -74,7 +74,7 @@
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"></a> </li>
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"> </li>
                         <!-- ============================================================== -->
-                        
+
                         <!-- ============================================================== -->
                         <!-- End Messages -->
                         <!-- ============================================================== -->
@@ -90,11 +90,11 @@
                             <form class="app-search">
                                 <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
                         </li>
-                        
+
                         <!-- ============================================================== -->
                         <!-- Language -->
                         <!-- ============================================================== -->
-                        
+
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
@@ -111,7 +111,7 @@
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
-                                    
+
                                     <li><a href="#"><i class="fa fa-power-off"></i> Salir</a></li>
                                 </ul>
                             </div>
@@ -166,33 +166,33 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
-                        
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="dashboard.html" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Mi establecimiento </span></a>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="calendario.html" ><i class="mdi mdi-calendar"></i><span class="hide-menu">Calendario</span></a>
                         <li> <a class="has-arrow waves-effect waves-dark" href="alertas.html" ><i class="mdi mdi-bullseye"></i><span class="hide-menu">Alertas</span></a>
-                            
+
                         </li>
-                        
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html" ><i class="mdi mdi-table"></i><span class="hide-menu">Resumen</span></a>
-                           
+
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="table.html" ><i class="mdi mdi-widgets"></i><span class="hide-menu">Reportes</span></a>
-                      
+
                         </li>
-             
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="tabla.html" ><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Histórico</span></a>
-                            
+
                         </li>
                         <li class="nav-small-cap">DEMO</li>
-                        
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="video.html" ><i class="mdi mdi-file-chart"></i><span class="hide-menu">Streaming</span></a>
-                            
+
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="mapa.html" ><i class="mdi mdi-pin"></i><span class="hide-menu">Georeferenciación</span></a>
-                           
+
                         </li>
-                        
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -209,7 +209,7 @@
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            
+
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -226,7 +226,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Alertas</h4>
-                                
+
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -242,19 +242,19 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>Alerta de temperatura</td>
-                                                <td>22/05/2020 12:07</td>
-                                                <td>30 Min</td>
+                                                <td>10/06/2020 12:07</td>
+                                                <td><p id="tempcontrol"></p></td>
                                                 <td><span class="label label-danger">Peligro</span> </td>
                                             </tr>
-                                            
+
                                             <tr>
                                                 <td>2</td>
                                                 <td>Alerta de aforo</td>
-                                                <td>22/05/2020 14:32</td>
+                                                <td>10/06/2020 14:32</td>
                                                 <td><p id="aforocontrol"></p></td>
                                                 <td><span class="label label-warning">Advertencia</span> </td>
                                             </tr>
-                                            
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -368,7 +368,8 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="assets/js/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-	<script>document.getElementById("aforocontrol").innerHTML = prodId;</script>
+	<script>document.getElementById("aforocontrol").innerHTML = valueAforo;</script>
+	<script>document.getElementById("tempcontrol").innerHTML = valueTemp;</script>
 </body>
 
 </html>
