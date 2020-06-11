@@ -49,7 +49,7 @@ function init() {
       });
     };
   } catch (ex) {
-    log(ex);
+    // log(ex);
   }
   $("msg").focus();
   setTimeout(init, 1000);
