@@ -5,9 +5,17 @@ require_once('../../libs/WebService.php');
 
 $new = new WebService();
 
+$end_date = date("Y-m-d H:i:s.000000");
+$start_date = date("Y-m-d H:i:s.000000", strtotime($ahora) - 60 * 60);
+
+// $dataPost = array(
+//    "start_date" => "2020-06-01 15:53:00.688705",
+//    "end_date" => "2020-06-01 15:55:00.688705"
+// );
+
 $dataPost = array(
-   "start_date" => "2020-06-01 15:53:00.688705",
-   "end_date" => "2020-06-01 15:55:00.688705"
+   "start_date" => $start_date,
+   "end_date" => $end_date
 );
 
 $data = $new->sendPost(URL_WEB_SERVICE, $dataPost);
